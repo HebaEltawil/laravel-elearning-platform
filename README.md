@@ -34,7 +34,7 @@ It supports **user authentication, course management, lessons, enrollments, quiz
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USERNAME/laravel-elearning-platform.git
+   git clone https://github.com/HebaEtawil/laravel-elearning-platform.git
    cd laravel-elearning-platform
 2. Install dependencies:
    ```bash
