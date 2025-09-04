@@ -22,7 +22,7 @@ It supports **user authentication, course management, lessons, enrollments, quiz
 
 ## Tech Stack
 
-- **Laravel 11** (PHP Framework)
+- **Laravel 12** (PHP Framework)
 - **MySQL** (Database)
 - **Laravel Sanctum** (Authentication)
 - **Postman** (API testing)
