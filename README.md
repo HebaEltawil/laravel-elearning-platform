@@ -1,3 +1,106 @@
+# Laravel E-Learning Platform
+
+A backend system for an E-Learning platform built with **Laravel**.  
+It supports **user authentication, course management, lessons, enrollments, quizzes, and quiz results** with role-based access control (Admin / Instructor / Student).
+
+---
+
+## Features
+
+- **Authentication** using Laravel Sanctum (Register, Login, Logout, Profile, Edit Profile).
+- **Course Management** (Create, View, Update Status, Delete).
+- **Lessons Management** (Create, View, Delete).
+- **Enrollments** (Students can enroll in courses, admins can manage enrollments).
+- **Quizzes & Questions** (Create quizzes with multiple questions and options).
+- **Quiz Results** (Students submit answers, system stores and evaluates results).
+- **Role-based Authorization**:
+  - Admin → Full control over all resources.
+  - Instructor → Can create courses, lessons, quizzes.
+  - Student → Can enroll in courses, view lessons, attempt quizzes.
+
+---
+
+## Tech Stack
+
+- **Laravel 11** (PHP Framework)
+- **MySQL** (Database)
+- **Laravel Sanctum** (Authentication)
+- **Postman** (API testing)
+- **Git/GitHub** (Version control)
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/USERNAME/laravel-elearning-platform.git
+   cd laravel-elearning-platform
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install
+4. Copy .env.example to .env and update DB credentials:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+6. Run migrations:
+   ```bash
+   php artisan migrate
+8. Start the development server:
+   ```bash
+   php artisan serve
+
+## API Endpoints (Main)
+## Authentication
+POST /api/register → Register new user
+
+POST /api/login → Login
+
+POST /api/logout → Logout
+
+GET /api/profile → Get user profile
+
+## Courses
+GET /api/courses → Get all courses
+
+POST /api/createCourse → Create course
+
+GET /api/courses/{courseId} → Get course by ID
+
+DELETE /api/deleteCourse/{courseId} → Delete course
+
+## Lessons
+GET /api/courses/{courseId}/lessons → Get lessons by course
+
+POST /api/courses/{courseId}/createLesson → Create lesson
+
+GET /api/lessons/{lessonId} → Get lesson by ID
+
+DELETE /api/deleteLesson/{lessonId} → Delete lesson
+
+## Enrollments
+GET /api/enrollments → List all enrollments
+
+POST /api/createEnrollment → Create enrollment
+
+DELETE /api/deleteEnrollment/{enrollmentId} → Delete enrollment
+
+## Quizzes
+POST /api/createQuiz → Create quiz
+
+GET /api/quizzes/{quizId} → Get quiz with questions
+
+DELETE /api/deleteQuiz/{quizId} → Delete quiz
+
+## Quiz Results
+POST /api/storeQuizResult → Submit quiz result
+
+GET /api/quizResult/{quizId} → View quiz results
+
+## Author
+Heba Saad
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
